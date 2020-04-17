@@ -73,7 +73,7 @@ export default class LocationServices extends React.Component {
     }
 
     getCivicRep = async () => {
-        const source = 'https://www.googleapis.com/civicinfo/v2/representatives?address=' + this.state.address + '&key=AIzaSyAY-PIZkP-MlZSL0K7pPszQjxLRZS8vJLg'
+        const source = 'https://www.googleapis.com/civicinfo/v2/representatives?address=' + this.state.address + '&key=AIzaSyAY-PIZkPXXX-MlZSL0K7pPszQjxLRZS8vJLg'
         // console.log(source)
         try{
             var response = await fetch(source)
@@ -116,7 +116,7 @@ export default class LocationServices extends React.Component {
     }
 
     getAddress = async () => {
-        const source = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + this.state.location.coords.latitude + ',' + this.state.location.coords.longitude + '&key=AIzaSyAY-PIZkP-MlZSL0K7pPszQjxLRZS8vJLg'
+        const source = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + this.state.location.coords.latitude + ',' + this.state.location.coords.longitude + '&key=AIzaSyAY-PIZkPXXX-MlZSL0K7pPszQjxLRZS8vJLg'
         try{
             var response = await fetch(source)
             let responseJSON = await response.json();
